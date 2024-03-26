@@ -1,0 +1,6 @@
+.container {
+  background-color: var(--bgSoft);
+  padding: 40px 20px;
+  width: 400px;
+  margin: 25px auto;
+}

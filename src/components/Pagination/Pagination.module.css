@@ -1,0 +1,15 @@
+.container {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.active {
+  background-color: var(--bgSoft);
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  padding: 8px;
+}

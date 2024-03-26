@@ -1,0 +1,32 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form input {
+  background-color: var(--bg);
+  color: var(--text);
+  width: 100%;
+  padding: 16px;
+  border: none;
+  outline: none;
+}
+
+.btn {
+  background-color: var(--btn);
+  color: var(--text);
+  border-radius: 5px;
+  font-weight: bold;
+  padding: 16px;
+  border: none;
+  outline: none;
+}
+
+.login_link b {
+  margin-left: 5px;
+}
+
+.login_link b:hover {
+  text-decoration: underline;
+}

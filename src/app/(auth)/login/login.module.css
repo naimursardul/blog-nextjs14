@@ -1,0 +1,25 @@
+.container {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin: 25px auto;
+  padding: 40px 30px;
+  background-color: var(--bgSoft);
+}
+
+.github_form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.github_btn {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  border: none;
+  outline: none;
+  padding: 20px;
+  font-weight: bold;
+}

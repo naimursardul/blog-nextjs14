@@ -1,0 +1,30 @@
+.credential_form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.credential_form input {
+  background-color: var(--bg);
+  border: none;
+  outline: none;
+  padding: 20px;
+  color: var(--text);
+}
+
+.btn {
+  border: none;
+  outline: none;
+  background-color: var(--btn);
+  padding: 20px;
+  font-weight: bold;
+  color: var(--text);
+}
+
+.register_link b {
+  margin-left: 5px;
+}
+
+.register_link b:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,19 @@
+.container {
+  margin: 25px 0;
+}
+.post_container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 80px;
+}
+
+.blog_post {
+  width: 300px;
+}
+
+@media (max-width: 420px) {
+  .blog_post {
+    width: 250px;
+  }
+}

@@ -1,0 +1,18 @@
+.avatar {
+  border-radius: 36px;
+}
+
+.detail {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.detail_title {
+  font-weight: bold;
+  color: gray;
+}
+
+.detail_value {
+  font-weight: 500;
+}

@@ -2,7 +2,6 @@
 
 import { register } from "@/lib/action";
 import styles from "./RegisterForm.module.css";
-import Link from "next/link";
 import { useFormState } from "react-dom";
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
@@ -28,14 +27,6 @@ const RegisterForm = () => {
       />
       {state?.error}
       <button className={styles.btn}>Register</button>
-      <div className={styles.login_link}>
-        <small>
-          <span>Have an account?</span>{" "}
-          <Link href={"/login"}>
-            <b>Login</b>
-          </Link>
-        </small>
-      </div>
     </form>
   );
 };

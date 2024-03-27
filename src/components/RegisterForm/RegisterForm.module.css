@@ -22,11 +22,3 @@
   border: none;
   outline: none;
 }
-
-.login_link b {
-  margin-left: 5px;
-}
-
-.login_link b:hover {
-  text-decoration: underline;
-}

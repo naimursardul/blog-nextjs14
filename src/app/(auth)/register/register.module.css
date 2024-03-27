@@ -1,6 +1,49 @@
 .container {
   background-color: var(--bgSoft);
-  padding: 40px 20px;
   width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 30px 20px;
   margin: 25px auto;
+}
+
+.or {
+  margin: auto;
+}
+
+.github_form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.github_btn {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  border: none;
+  outline: none;
+  padding: 20px;
+  font-weight: bold;
+}
+
+.login_link b {
+  margin-left: 5px;
+}
+
+.login_link b:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 640px) {
+  .container {
+    width: 90%;
+  }
+}
+@media (max-width: 480px) {
+  .container {
+    width: 100%;
+    padding: 30px 20px;
+  }
 }

@@ -1,7 +1,7 @@
 .credential_form {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 10px;
 }
 
 .credential_form input {
@@ -19,12 +19,4 @@
   padding: 20px;
   font-weight: bold;
   color: var(--text);
-}
-
-.register_link b {
-  margin-left: 5px;
-}
-
-.register_link b:hover {
-  text-decoration: underline;
 }

@@ -18,7 +18,7 @@ export default async function Page() {
       </form>
       <div className={styles.register_link}>
         <small>
-          <span>Don't have an account?</span>
+          <span>{"Don't have an account?"}</span>
           <Link href={"/register"}>
             <b>Register</b>
           </Link>

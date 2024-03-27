@@ -5,7 +5,7 @@ import styles from "./AdminAddUser.module.css";
 import { addUser } from "@/lib/action";
 import { useFormState } from "react-dom";
 
-async function AdminAddUser() {
+function AdminAddUser() {
   const [state, formAction] = useFormState(addUser, undefined);
   return (
     <form action={formAction} className={styles.container}>

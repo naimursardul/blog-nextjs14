@@ -1,4 +1,4 @@
-import { Post, User } from "./models";
+import { User } from "./models";
 import { connectDB } from "./utils";
 
 export const getUsers = async () => {
@@ -15,7 +15,7 @@ export const getUsers = async () => {
 export const getUser = async (userId) => {
   try {
     connectDB();
-    const user = await User.findOne({ id: parseInt(userId) });
+    const user = await User.findById(userId);
     return user;
   } catch (error) {
     console.log(error);

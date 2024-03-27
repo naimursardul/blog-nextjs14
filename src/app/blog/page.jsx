@@ -9,7 +9,7 @@ export default async function Page({ searchParams }) {
   console.log(page);
 
   const paginationConfig = {
-    perPage: 1,
+    perPage: 4,
     pageUrl: "/blog?page=",
     offsetNumber: 3,
     page,

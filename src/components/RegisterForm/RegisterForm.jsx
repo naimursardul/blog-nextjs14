@@ -3,17 +3,9 @@
 import { register } from "@/lib/action";
 import styles from "./RegisterForm.module.css";
 import { useFormState } from "react-dom";
-import { useEffect } from "react";
-import { useRouter } from "next/navigation";
 
 const RegisterForm = () => {
   const [state, formAction] = useFormState(register, undefined);
-
-  const router = useRouter();
-
-  useEffect(() => {
-    state?.success && router.push("/login");
-  }, [state?.success, router]);
 
   return (
     <form className={styles.form} action={formAction}>
@@ -25,7 +17,7 @@ const RegisterForm = () => {
         name="passwordRepeat"
         placeholder="password again"
       />
-      {state?.error}
+      <small style={{ color: "red" }}>{state?.error}</small>
       <button className={styles.btn}>Register</button>
     </form>
   );

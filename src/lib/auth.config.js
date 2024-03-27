@@ -26,6 +26,7 @@ export const authConfig = {
       const isAdminPannel = request.nextUrl.pathname?.startsWith("/admin");
       const isBlogPage = request.nextUrl.pathname?.startsWith("/blog");
       const isLoginPage = request.nextUrl.pathname?.startsWith("/login");
+      const isRegisterPage = request.nextUrl.pathname?.startsWith("/register");
 
       // ONLY AUTHANTICATED USER CAN REACH BLOG PAGE
       if (isBlogPage && !user) return false;
@@ -34,7 +35,7 @@ export const authConfig = {
       if (isAdminPannel && !auth?.user.isAdmin) return false;
 
       // UNAUTHANTICATED USER CAN REACH LOGIN PAGE
-      if (isLoginPage && user)
+      if ((isLoginPage || isRegisterPage) && user)
         return Response.redirect(new URL("/", request.nextUrl));
 
       return true;

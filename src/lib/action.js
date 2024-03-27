@@ -4,6 +4,7 @@ import { Post, User } from "./models";
 import { connectDB, hash } from "./utils";
 import { signIn, signOut } from "./auth";
 import { revalidatePath } from "next/cache";
+import { redirect } from "next/navigation";
 
 // SIGNIN WITH GITHUB
 export const handleLogin = async () => {
@@ -40,15 +41,14 @@ export const register = async (previousState, formData) => {
       email,
       password: hash(password),
       img,
-      isAdmin,
     });
 
     await newUser.save();
-    return { success: true };
   } catch (error) {
     console.log(error);
     return { error: "Somethind went wrong!" };
   }
+  redirect("/login");
 };
 
 // LOGIN
@@ -74,8 +74,9 @@ export const addPost = async (prev, formData) => {
   // const desc = formData.get("desc");
   // const slug = formData.get("slug");
 
+  let newPost;
   try {
-    const newPsot = await Post.create({
+    newPost = await Post.create({
       title,
       slug,
       img,
@@ -83,13 +84,16 @@ export const addPost = async (prev, formData) => {
       userId,
     });
 
-    await newPsot.save();
+    await newPost.save();
+
     revalidatePath("/blog");
     revalidatePath("/admin");
   } catch (error) {
     console.log(error);
     return { error: "Somethinng went wrong!" };
   }
+
+  redirect(`/blog/${newPost?.slug}`);
 };
 
 // ADMIN DELETE POST
@@ -122,6 +126,7 @@ export const addUser = async (prev, formData) => {
 
     await newUser.save();
     revalidatePath("/admin");
+    return { success: "User added successfully!" };
   } catch (error) {
     console.log(error);
     return { error: "Something went wrong!" };

@@ -5,6 +5,7 @@ import { getUser } from "@/lib/data";
 export default async function PostUser({ post }) {
   const { userId } = post;
   const user = await getUser(userId);
+
   return (
     <>
       <Image

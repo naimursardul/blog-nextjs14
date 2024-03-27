@@ -19,6 +19,7 @@ function AdminAddUser() {
         <option value={false}>No</option>
       </select>
       <small>{state?.error}</small>
+      <small>{state?.success}</small>
       <button className={styles.btn}>Add</button>
     </form>
   );

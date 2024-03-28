@@ -31,7 +31,7 @@ export default async function Page({ params }) {
         <div className={styles.title_section}>
           <h1>{post?.title}</h1>
           {post?.userId === session?.user.id && (
-            <Link className={styles.edit_btn} href={`/blog/${post?.slug}/edit`}>
+            <Link className={styles.edit_btn} href={`/blog/edit/${post?.slug}`}>
               Edit
             </Link>
           )}

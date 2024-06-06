@@ -12,9 +12,7 @@ export default async function AdminPosts({ searchParams }) {
     <div className={styles.container}>
       <div className={styles.section}>
         <h1>All Posts</h1>
-        <Suspense fallback={"Loading..."}>
-          <AdminAllPost searchParams={searchParams} />
-        </Suspense>
+        <AdminAllPost searchParams={searchParams} />
       </div>
       <div className={styles.section}>
         <h1>Add Post</h1>

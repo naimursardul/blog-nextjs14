@@ -11,7 +11,7 @@ export default function AdminLinks() {
     <div className={styles.link_section}>
       <Link
         className={pathName === "/admin" ? styles.active_link : styles.link}
-        href={`/admin`}
+        href="/admin"
       >
         Admin Home
       </Link>
@@ -19,7 +19,7 @@ export default function AdminLinks() {
         className={
           pathName === "/admin/users" ? styles.active_link : styles.link
         }
-        href={`/admin/users`}
+        href="/admin/users"
       >
         Manage User
       </Link>
@@ -27,7 +27,7 @@ export default function AdminLinks() {
         className={
           pathName === "/admin/posts" ? styles.active_link : styles.link
         }
-        href={`/admin/posts`}
+        href="/admin/posts"
       >
         Manage Posts
       </Link>

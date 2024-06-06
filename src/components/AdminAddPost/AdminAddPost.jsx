@@ -4,6 +4,7 @@ import { addPost } from "@/lib/action";
 import styles from "./AdminAddPost.module.css";
 import { useFormState } from "react-dom";
 import { redirect } from "next/navigation";
+import SubmitBtn from "../SubmitBtn/SubmitBtn";
 
 function AdminAddPost({ userId }) {
   const [state, formAction] = useFormState(addPost, undefined);
@@ -19,7 +20,7 @@ function AdminAddPost({ userId }) {
       <textarea name="desc" placeholder="description" rows="10"></textarea>
       <input type="hidden" name="userId" value={userId} />
       <small>{state?.error}</small>
-      <button className={styles.btn}>Add</button>
+      <SubmitBtn title={"Add"} />
     </form>
   );
 }

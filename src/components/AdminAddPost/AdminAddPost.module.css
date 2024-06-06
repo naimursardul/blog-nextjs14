@@ -12,13 +12,3 @@
   outline: none;
   color: var(--text);
 }
-
-.btn {
-  padding: 8px 12px;
-  background-color: var(--btn);
-  font-weight: bold;
-  color: var(--text);
-  border: none;
-  outline: none;
-  border-radius: 5px;
-}

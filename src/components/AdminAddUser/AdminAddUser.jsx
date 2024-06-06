@@ -4,6 +4,7 @@ import { getUsers } from "@/lib/data";
 import styles from "./AdminAddUser.module.css";
 import { addUser } from "@/lib/action";
 import { useFormState } from "react-dom";
+import SubmitBtn from "../SubmitBtn/SubmitBtn";
 
 function AdminAddUser() {
   const [state, formAction] = useFormState(addUser, undefined);
@@ -20,7 +21,7 @@ function AdminAddUser() {
       </select>
       <small>{state?.error}</small>
       <small>{state?.success}</small>
-      <button className={styles.btn}>Add</button>
+      <SubmitBtn title={"Add"} />
     </form>
   );
 }

@@ -1,6 +1,5 @@
 "use client";
 
-import { getUsers } from "@/lib/data";
 import styles from "./AdminAddUser.module.css";
 import { addUser } from "@/lib/action";
 import { useFormState } from "react-dom";

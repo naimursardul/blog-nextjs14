@@ -20,7 +20,7 @@ export default async function Page({ params }) {
   const post = await getPost(slug);
   const session = await auth();
 
-  console.log(post?.createdAt);
+  console.log(Date(post?.createdAt).toString());
 
   return (
     <div className={styles.container}>
@@ -41,7 +41,7 @@ export default async function Page({ params }) {
           <div className={styles.detail}>
             <div className={styles.detail_title}>Published</div>
             <div className={styles.detail_value}>
-              {post?.createdAt.toString().slice(4, 16)}
+              {Date(post?.createdAt).toString().slice(4, 21)}
             </div>
           </div>
         </div>

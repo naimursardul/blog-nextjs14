@@ -15,7 +15,7 @@ export default function PostCard({ post }) {
         <h2>
           <Link href={`/blog/${post?.slug}`}>{post?.title}</Link>
         </h2>
-        <p>{post?.desc}</p>
+        <p>{post?.desc.slice(0, 100)}</p>
         <Link href={`/blog/${post?.slug}`} className={styles.link}>
           READ MORE...
         </Link>

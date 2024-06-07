@@ -116,15 +116,18 @@ export const addUser = async (prev, formData) => {
     Object.fromEntries(formData);
 
   try {
-    const newUser = await User.create({
-      username,
-      email,
-      isAdmin,
-      img,
-      password: hash(password),
-    });
+    // const newUser = await User.create({
+    //   username,
+    //   email,
+    //   isAdmin,
+    //   img,
+    //   password: hash(password),
+    // });
 
-    await newUser.save();
+    // await newUser.save();
+    console.log("first");
+    console.log(formData);
+    formData.reset();
     revalidatePath("/admin");
     return { success: "User added successfully!" };
   } catch (error) {

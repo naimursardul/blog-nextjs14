@@ -9,3 +9,34 @@
   font-weight: bold;
   font-size: 30px;
 }
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logout_btn {
+  padding: 10px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  font-weight: 500;
+  text-align: center;
+  background-color: var(--text);
+  color: var(--bg);
+}
+
+.mobile_nav {
+  display: none;
+}
+
+@media (max-width: 992px) {
+  .mobile_nav {
+    display: block;
+  }
+
+  .links {
+    display: none;
+  }
+}

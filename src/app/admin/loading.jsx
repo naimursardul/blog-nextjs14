@@ -3,7 +3,7 @@ export default function Loading() {
     <div
       style={{
         display: "flex",
-        height: "100%",
+        height: "200px",
         width: "100%",
         justifyContent: "center",
         alignItems: "center",
